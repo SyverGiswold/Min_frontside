@@ -118,19 +118,11 @@ header {
 /* Start på galleri instillinger */
 .gallery {
 	display: flex;
+	flex-wrap: wrap;
 }
 
-.gallery-box-1 {
-	flex: 1;
-	position: relative;
-	margin-bottom: 2%;
-	margin-left: 1%;
-	margin-right: 1%;
-	cursor: pointer;
-}
-
-.gallery-box-2{
-	flex: 1;
+.gallery-box {
+	flex: 48%;
 	position: relative;
 	margin-bottom: 2%;
 	margin-left: 1%;
@@ -141,7 +133,6 @@ header {
 img {
 	max-width: 100%;
 	max-height: 100%;
-	margin: auto;
 	z-index: 0;
 	filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.15));
 }
@@ -149,21 +140,15 @@ img {
 .overlay {
 	position: absolute;
 	top: 0;
-	left: 0;
 	height: 100%;
 	width: 100%;
 	opacity: 0;
 	transition: .5s ease;
 	background-color: #3AAFA9;
-	align-items: stretch;
 	pointer-events: none;
 }
 
-.gallery-box-1:hover .overlay {
-	opacity: 1;
-}
-
-.gallery-box-2:hover .overlay {
+.gallery-box:hover .overlay {
 	opacity: 1;
 }
 
@@ -277,19 +262,19 @@ input[type=text], select, textarea {
     font-size: 18px;
   }
 
+  a:hover {
+	display: none;
+  }
+
   .gallery {
 	max-width: 100%;
-}
+  }
 
   .overlay {
 	display: none;
   }
 
-  .gallery-box-1:hover .overlay {
-	display: none;
-  }
-
-  .gallery-box-2:hover .overlay {
+  .gallery-box:hover .overlay {
 	display: none;
   }
 
@@ -341,5 +326,10 @@ input[type=text], select, textarea {
   footer {
 	position: fixed;
 	bottom: 0px;
+  }
+
+  #scrollToTopBtn:hover {
+	color: #FEFFFF;
+	transition-duration: 0.25s;
   }
 }
