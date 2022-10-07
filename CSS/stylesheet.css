@@ -36,6 +36,7 @@ p {
 body {
 	background-color: #DEF2F1;
 	margin: 0px;
+	
 }
 
 main {
@@ -128,6 +129,7 @@ header {
 	margin-left: 1%;
 	margin-right: 1%;
 	cursor: pointer;
+
 }
 
 img {
