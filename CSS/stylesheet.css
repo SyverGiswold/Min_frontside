@@ -44,7 +44,6 @@ main {
 	padding-top: 5%;
 	padding-bottom: 5%;
 	background-color: #FEFFFF;
-	min-height: 100%;
 }
 
 section {
@@ -55,11 +54,18 @@ section {
 
 footer {
 	background-color: #3AAFA9;
-	bottom: 0px;
 	width: 100%;
 	display: flex;
-	filter: drop-shadow(0px -5px 5px rgba(0, 0, 0, 0.15));
-	margin-top: auto;
+	filter: drop-shadow(0px -5px 3px rgba(0, 0, 0, 0.15));
+}
+
+#scrollToTopBtn {
+	cursor: pointer;
+  }
+
+#scrollToTopBtn:hover {
+	color: #17252A;
+	transition-duration: 0.25s;
 }
 
 /* Start på header instillinger */
@@ -82,7 +88,7 @@ header {
 	width: 100%;
 	background-color: #3AAFA9;
 	z-index: 1;
-	filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.15));
+	filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.15));
 }
 
 .navbar{
@@ -120,6 +126,7 @@ header {
 	margin-bottom: 2%;
 	margin-left: 1%;
 	margin-right: 1%;
+	cursor: pointer;
 }
 
 .gallery-box-2{
@@ -128,15 +135,15 @@ header {
 	margin-bottom: 2%;
 	margin-left: 1%;
 	margin-right: 1%;
+	cursor: pointer;
 }
 
-.gallery-img {
+img {
 	max-width: 100%;
 	max-height: 100%;
-	display: flex;
 	margin: auto;
 	z-index: 0;
-	filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
+	filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.15));
 }
 
 .overlay {
@@ -148,7 +155,8 @@ header {
 	opacity: 0;
 	transition: .5s ease;
 	background-color: #3AAFA9;
-	align-items: stretch
+	align-items: stretch;
+	pointer-events: none;
 }
 
 .gallery-box-1:hover .overlay {
@@ -182,20 +190,20 @@ header {
 .about-me-box-1 {
 	margin-bottom: 2%;
 	margin-left: 1%;
-	margin-right: 1%;
+	margin-right: 24px;
 }
 
 .about-me-box-2 {
 	margin-bottom: 2%;
-	margin-left: 1%;
-	margin-right: 1%;
+	margin-left: 2%;
+	margin-right: 24px;
 }
 
 .about-me-img {
 	max-width: 100%;
 	margin: auto;
 	z-index: 0;
-	filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
+	filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.15));
 }
 
 .about-me-text {
@@ -204,35 +212,89 @@ header {
 	margin-bottom: auto;
 }
 
+/* Contact forum start
+tatt fra https://www.w3schools.com/howto/howto_css_contact_form.asp*/
+input[type=text], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #17252A;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+	font-family: 'Open Sans', sans-serif;
+	color: #17252A;
+  }
+  
+  input[type=submit] {
+	background-color: #3AAFA9;
+	color: #FEFFFF;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+	background-color: #17252A;
+	transition: 0.15s;
+  }
+  
+  .contact-container {
+	border-radius: 5px;
+	background-color: #DEF2F1;
+	padding: 20px;
+	font-family: 'Open Sans', sans-serif;
+	color: #17252A;
+  }
+  /* Contact forum slutt*/
+
 /* Mobil view */
 @media screen and (max-width: 600px) {
+
+  body {
+	background-color: #3AAFA9;
+  }
+
   main {
     margin-left: 0%;
     margin-right: 0%;
+	overflow: hidden;
+	min-height: 100vh;
   }
 
   h1 {
     font-size: 18px;
-    color: DEF2F1;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
   }
 
   h2 {
-    text-align: center;
-    font-size: 48px;
-    color: #17252A;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 700;
+	margin-top: 15%;
+    font-size: 24px;
   }
   
   h3 {
     font-size: 18px;
-    color: #FEFFFF;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    margin-left: auto;
-    margin-right: auto;
+  }
+
+  .gallery {
+	max-width: 100%;
+}
+
+  .overlay {
+	display: none;
+  }
+
+  .gallery-box-1:hover .overlay {
+	display: none;
+  }
+
+  .gallery-box-2:hover .overlay {
+	display: none;
+  }
+
+  .text {
+	display: none;
   }
 
   .navbar {
@@ -241,10 +303,43 @@ header {
     margin-right: 12px;
   }
 
+  .navbar-box-1 {
+	flex: auto;
+	margin-right: 2%;
+  }
+
+  .navbar-box-2{
+	flex: auto;
+	margin-right: 2%;
+  }
+
+  .navbar-box-3 {
+	flex: auto;
+	margin-right: 2%;
+  }
+
   .about-me {
 	display: flex;
 	width: 90%;
 	margin: auto;
 	flex-direction: column-reverse;
+  }
+
+  .about-me-box-1 {
+	margin-bottom: 2%;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: 8%;
+  }
+
+  .about-me-box-2 {
+	margin-bottom: 2%;
+	margin-left: 1%;
+	margin-right: 1%;
+  }
+
+  footer {
+	position: fixed;
+	bottom: 0px;
   }
 }
