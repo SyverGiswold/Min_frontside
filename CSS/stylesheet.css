@@ -2,8 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
 
+html {font-size: 150%;} /*24px*/
+
 h1 {
-	font-size: 24px;
+	font-size: 1rem;
 	color: #FEFFFF;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 300;
@@ -11,14 +13,14 @@ h1 {
 
 h2 {
 	text-align: center;
-	font-size: 48px;
+	font-size: 2rem;
 	color: #17252A;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
 }
 
 h3 {
-	font-size: 24px;
+	font-size: 1rem;
 	color: #FEFFFF;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 300;
@@ -35,7 +37,7 @@ p {
 
 body {
 	background-color: #DEF2F1;
-	margin: 0px;
+	margin: 0rem;
 	
 }
 
@@ -57,7 +59,7 @@ footer {
 	background-color: #3AAFA9;
 	width: 100%;
 	display: flex;
-	filter: drop-shadow(0px -5px 3px rgba(0, 0, 0, 0.15));
+	filter: drop-shadow(0rem -0.313rem 0.188rem rgba(0, 0, 0, 0.15));
 }
 
 #scrollToTopBtn {
@@ -78,6 +80,7 @@ a {
 a:hover {
 	color: #17252A;
 	transition-duration: 0.25s;
+	transition-delay: 0.1s;
 }
 
 .active {
@@ -89,13 +92,13 @@ header {
 	width: 100%;
 	background-color: #3AAFA9;
 	z-index: 1;
-	filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.15));
+	filter: drop-shadow(0rem 0.313rem 0.188rem rgba(0, 0, 0, 0.15));
 }
 
 .navbar{
 	display: flex;
-	margin-left: 48px;
-	margin-right: 48px;
+	margin-left: 2rem;
+	margin-right: 2rem;
 }
 
 .navbar-box-1 {
@@ -129,14 +132,13 @@ header {
 	margin-left: 1%;
 	margin-right: 1%;
 	cursor: pointer;
-
 }
 
 img {
 	max-width: 100%;
 	max-height: 100%;
 	z-index: 0;
-	filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.15));
+	filter: drop-shadow(0.313rem 0.313rem 0.188rem rgba(0, 0, 0, 0.15));
 }
 
 .overlay {
@@ -148,6 +150,7 @@ img {
 	transition: .5s ease;
 	background-color: #3AAFA9;
 	pointer-events: none;
+	transition-delay: 0.1s;
 }
 
 .gallery-box:hover .overlay {
@@ -156,7 +159,7 @@ img {
 
 .text {
 	color: #FEFFFF;
-	font-size: 48px;
+	font-size: 2rem;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -177,20 +180,20 @@ img {
 .about-me-box-1 {
 	margin-bottom: 2%;
 	margin-left: 1%;
-	margin-right: 24px;
+	margin-right: 1rem;
 }
 
 .about-me-box-2 {
 	margin-bottom: 2%;
 	margin-left: 2%;
-	margin-right: 24px;
+	margin-right: 1rem;
 }
 
 .about-me-img {
 	max-width: 100%;
 	margin: auto;
 	z-index: 0;
-	filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.15));
+		filter: drop-shadow(0rem -0.313rem 0.188rem rgba(0, 0, 0, 0.15));
 }
 
 .about-me-text {
@@ -203,12 +206,12 @@ img {
 tatt fra https://www.w3schools.com/howto/howto_css_contact_form.asp*/
 input[type=text], select, textarea {
 	width: 100%;
-	padding: 12px;
-	border: 1px solid #17252A;
-	border-radius: 4px;
+	padding: 0.75rem;
+	border: 0.063rem solid #17252A;
+	border-radius: 0.25rem;
 	box-sizing: border-box;
-	margin-top: 6px;
-	margin-bottom: 16px;
+	margin-top: 0.375rem;
+	margin-bottom: 1rem;
 	resize: vertical;
 	font-family: 'Raleway', sans-serif;
 	color: #17252A;
@@ -217,9 +220,9 @@ input[type=text], select, textarea {
   input[type=submit] {
 	background-color: #3AAFA9;
 	color: #FEFFFF;
-	padding: 12px 20px;
+	padding: 0.75rem 1.25rem;
 	border: none;
-	border-radius: 4px;
+	border-radius: 0.313rem;
 	cursor: pointer;
   }
   
@@ -229,9 +232,9 @@ input[type=text], select, textarea {
   }
   
   .contact-container {
-	border-radius: 5px;
+	border-radius: 0.313rem;
 	background-color: #DEF2F1;
-	padding: 20px;
+	padding: 1.25rem;
 	font-family: 'Raleway', sans-serif;
 	color: #17252A;
   }
@@ -239,6 +242,8 @@ input[type=text], select, textarea {
 
 /* Mobil view */
 @media screen and (max-width: 600px) {
+
+  html {font-size: 100%;} /*24px*/
 
   body {
 	background-color: #3AAFA9;
@@ -252,16 +257,16 @@ input[type=text], select, textarea {
   }
 
   h1 {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   h2 {
 	margin-top: 15%;
-    font-size: 24px;
+    font-size: 1rem;
   }
   
   h3 {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .gallery {
@@ -282,8 +287,8 @@ input[type=text], select, textarea {
 
   .navbar {
     display: flex;
-    margin-left: 12px;
-    margin-right: 12px;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
   }
 
   .navbar-box-1 {
@@ -323,11 +328,15 @@ input[type=text], select, textarea {
 
   footer {
 	position: fixed;
-	bottom: 0px;
+	bottom: 0rem;
   }
 
   #scrollToTopBtn:hover {
 	color: #FEFFFF;
 	transition-duration: 0.25s;
+  }
+
+  input[type=submit] {
+	padding: 1rem 1.25rem;
   }
 }
