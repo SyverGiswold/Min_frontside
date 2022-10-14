@@ -33,6 +33,7 @@ p {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 400;
 	color: #17252A;
+	font-size: 0.66667rem;
 }
 
 body {
@@ -93,6 +94,7 @@ header {
 	background-color: #3AAFA9;
 	z-index: 1;
 	filter: drop-shadow(0rem 0.313rem 0.188rem rgba(0, 0, 0, 0.15));
+	height: 3rem;
 }
 
 .navbar{
@@ -101,21 +103,17 @@ header {
 	margin-right: 2rem;
 }
 
-.navbar-box-1 {
-	flex: auto;
+.navbar-box{
+	margin-right: 2rem;
 }
 
-.navbar-box-2{
-	flex: auto;
+.navbar-box-logo {
+	margin-left: auto;
 }
 
-.navbar-box-3 {
-	flex: auto;
-}
-
-.navbar-box-4 {
-	flex: 40;
-	text-align: right;
+#header-logo {
+	height: 3rem;
+	width: 100%;
 }
 /* Slutt på galleri instillinger */
 
@@ -129,12 +127,12 @@ header {
 	flex: 48%;
 	position: relative;
 	margin-bottom: 2%;
-	margin-left: 1%;
-	margin-right: 1%;
+	margin-left: 2%;
+	margin-right: 2%
 	cursor: pointer;
 }
 
-img {
+.img-drop-shadow {
 	max-width: 100%;
 	max-height: 100%;
 	z-index: 0;
@@ -159,7 +157,7 @@ img {
 
 .text {
 	color: #FEFFFF;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -237,6 +235,7 @@ input[type=text], select, textarea {
 	padding: 1.25rem;
 	font-family: 'Raleway', sans-serif;
 	color: #17252A;
+	font-size: 0.75rem;
   }
   /* Contact forum slutt*/
 
@@ -291,20 +290,13 @@ input[type=text], select, textarea {
     margin-right: 0.75rem;
   }
 
-  .navbar-box-1 {
+  .navbar-box {
 	flex: auto;
-	margin-right: 2%;
   }
 
-  .navbar-box-2{
-	flex: auto;
-	margin-right: 2%;
-  }
-
-  .navbar-box-3 {
-	flex: auto;
-	margin-right: 2%;
-  }
+  .navbar-box-logo{
+	display: none;
+}
 
   .about-me {
 	display: flex;
@@ -327,8 +319,7 @@ input[type=text], select, textarea {
   }
 
   footer {
-	position: fixed;
-	bottom: 0rem;
+	display: none;
   }
 
   #scrollToTopBtn:hover {
@@ -338,5 +329,11 @@ input[type=text], select, textarea {
 
   input[type=submit] {
 	padding: 1rem 1.25rem;
+  }
+
+  header {
+	position: fixed;
+	bottom: 0;
+	text-align: center;
   }
 }
