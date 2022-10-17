@@ -35,7 +35,7 @@ p {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   color: #17252a;
-  font-size: 0.66667rem;
+  font-size: 0.75rem;
 }
 
 body {
@@ -62,6 +62,10 @@ footer {
   width: 100%;
   display: flex;
   filter: drop-shadow(0rem -0.313rem 0.188rem rgba(0, 0, 0, 0.15));
+}
+
+.navbar-footer {
+  display: none;
 }
 
 #scrollToTopBtn {
@@ -98,13 +102,13 @@ header {
   height: 3rem;
 }
 
-.navbar {
+.navbar-header {
   display: flex;
   margin-left: 2rem;
   margin-right: 2rem;
 }
 
-.navbar-box {
+.navbar-box-header {
   margin-right: 2rem;
 }
 
@@ -133,7 +137,7 @@ header {
   cursor: pointer;
 }
 
-.img-drop-shadow {
+.img-with-drop-shadow {
   max-width: 100%;
   max-height: 100%;
   z-index: 0;
@@ -143,8 +147,9 @@ header {
 .overlay {
   position: absolute;
   top: 0;
-  height: 100%;
+  height: 0;
   width: 100%;
+  padding-bottom: 100%;
   opacity: 0;
   transition: 0.5s ease;
   background-color: #2b7a78;
@@ -177,19 +182,22 @@ header {
 }
 
 .about-me-box-1 {
+  flex: grow;
   margin-bottom: 2%;
   margin-left: 1%;
   margin-right: 1rem;
 }
 
 .about-me-box-2 {
+  flex: shrink;
   margin-bottom: 2%;
   margin-left: 2%;
   margin-right: 1rem;
 }
 
 .about-me-img {
-  max-width: 100%;
+  height: 100%;
+  width: 100%;
   margin: auto;
   z-index: 0;
   filter: drop-shadow(0rem -0.313rem 0.188rem rgba(0, 0, 0, 0.15));
@@ -242,14 +250,14 @@ input[type="submit"]:hover {
 /* Contact forum slutt*/
 
 /* Mobil view */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   html {
     font-size: 100%;
   } /*16px*/
 
   body {
     background-color: #2b7a78;
-  }
+  } 
 
   main {
     margin-left: 0%;
@@ -258,13 +266,18 @@ input[type="submit"]:hover {
     min-height: 100vh;
   }
 
+  footer {
+    position: fixed;
+    bottom: 0;
+  }
+
   h1 {
     font-size: 1.125rem;
   }
 
   h2 {
     margin-top: 15%;
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   h3 {
@@ -287,12 +300,22 @@ input[type="submit"]:hover {
     display: none;
   }
 
-  .navbar {
+  .navbar-box-logo {
+    margin-left: 0;
+    align-items: left;
+    justify-content: left;
+  }
+
+  .navbar-box-header {
+    display: none;
+  }
+
+  .navbar-footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
     display: flex;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin: auto;
     width: 100%;
-    height:
   }
 
   .navbar-box {
@@ -323,6 +346,10 @@ input[type="submit"]:hover {
     margin-bottom: 2%;
     margin-left: 1%;
     margin-right: 1%;
+  }
+
+  #scrollToTopBtn {
+    display: none;
   }
 
   #scrollToTopBtn:hover {
