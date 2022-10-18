@@ -182,18 +182,16 @@ header {
 }
 
 .about-me-box-1 {
-  flex: grow;
+  flex: 65%;
   margin-bottom: 2%;
   margin-right: 1rem;
-  max-height: fit-content;
 }
 
 .about-me-box-2 {
-  flex: shrink;
+  flex: 35%;
   margin-bottom: 2%;
   margin-left: 2%;
   margin-right: 1rem;
-  max-height: fit-content;
 }
 
 .about-me-img {
