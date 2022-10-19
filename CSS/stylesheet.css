@@ -4,7 +4,9 @@
 
 html {
   font-size: 150%;
-} /*24px*/
+}
+
+/*24px*/
 
 h1 {
   font-size: 1rem;
@@ -120,6 +122,7 @@ header {
   height: 3rem;
   width: 100%;
 }
+
 /* Slutt på galleri instillinger */
 
 /* Start på galleri instillinger */
@@ -172,6 +175,7 @@ header {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
 }
+
 /* Slutt av galleri instillinger */
 
 .about-me {
@@ -207,6 +211,7 @@ header {
   margin-top: auto;
   margin-bottom: auto;
 }
+
 /* Contact forum start
 tatt fra https://www.w3schools.com/howto/howto_css_contact_form.asp*/
 input[type="text"],
@@ -246,17 +251,20 @@ input[type="submit"]:hover {
   color: #17252a;
   font-size: 0.75rem;
 }
+
 /* Contact forum slutt*/
 
 /* Mobil view */
 @media screen and (max-width: 800px) {
   html {
     font-size: 100%;
-  } /*16px*/
+  }
+
+  /*16px*/
 
   body {
     background-color: #2b7a78;
-  } 
+  }
 
   main {
     margin-left: 0%;
